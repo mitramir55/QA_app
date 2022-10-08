@@ -58,3 +58,84 @@ if __name__ == "__main__":
 
             # display answer
             st.write(answer)
+
+
+class Solution:
+
+    # def is_palindrom(self, s, i, j):
+    #     l, r = i, j
+
+    #     while l < r:
+    #         if s[l] != s[r]: return False
+    #         l, r = l + 1, r - 1 
+    #     return True
+
+    def partition(self, s: str) -> List[List[str]]:
+
+        all_parts = []
+        part = []
+
+        def dfs(i):
+            if i == len(s):
+                all_parts.append(part.copy())
+                return
+            for j in range(i+1, len(s)+1):
+                # j+1?
+                # s[i:j] == s[i:j][::-1]
+                #if self.is_palindrom(s, i, j):
+                if s[i:j] == s[i:j][::-1]:
+                    part.append(s[i:j])
+                    dfs(j)
+
+                    # if it is a palindrom the whole list of partitions will be 
+                    # added to the all_pars
+                    part.pop()
+        dfs(0)
+        return all_parts
+
+def palindrom_substrings(s:str) -> list[list]:
+    """
+    find all the substrings that are palindromes and form s
+    """
+    partition = []
+    ret_list = []
+
+    def dfs(idx):
+        """
+        gets the index for starting the partition and 
+        adds palindromes to ret_list
+        """
+        if idx == len(s):
+            ret_list.append(partition.copy())
+            return
+        
+        for j in range(idx + 1, len(s) + 1):
+            if s[idx:j] == s[idx:j][::-1]:
+                partition.append(s[idx:j])
+                dfs(j)
+
+                # we have to remove what we added here because we will have 
+                # to check if partition has the whole s by checking if 
+                # idx == len(s)
+                partition.pop()
+            
+        dfs(0)
+        return ret_list
+palindrom_substrings('aab')
+
+
+
+from functools import cache
+
+@cache
+def palindrom_substrings_2(s:str) -> list[list]:
+    ret_list = []
+    if not s: return [[]]
+
+    for i in range(1, len(s) + 1):
+        if s[:i] == s[:i][::-1]:
+            for suffix in palindrom_substrings_2(s[i:]):
+                ret_list .append([s[:i]] + suffix)
+    return ret_list
+
+palindrom_substrings_2('aab')
