@@ -1,6 +1,11 @@
 # :question:Question :exclamation:Answering with the help of transformers
 
 
+## Easiest way to run the app??
+
+As streamlit might have many conflicts with other libraries you've installed before, I suggest using Google Colab to avoid any confusion or time loss.
+
+## Description
 
 This is an app based on the Python programming language. In this app, 
 we create a question answer application with the help of [streamlit](https://docs.streamlit.io/library/get-started), [wikipedea](https://pypi.org/project/wikipedia/), and [transformers](https://huggingface.co/) libraries. We're using 

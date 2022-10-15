@@ -1,3 +1,5 @@
+#  Copyright Minaoar Hossain Tanzil, 2022 Licensed under MIT License.
+#  See the LICENSE.txt for more information.
 
 import wikipedia
 import streamlit as st
