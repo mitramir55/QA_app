@@ -1,9 +1,9 @@
-# Question Answering with the help of transformers
+# :question:Question :exclamation:Answering with the help of transformers
 
 
 
 This is an app based on the Python programming language. In this app, 
-we create a question answer application with the help of streamlit. We're using 
+we create a question answer application with the help of [streamlit](https://docs.streamlit.io/library/get-started), [wikipedea](https://pypi.org/project/wikipedia/), and [transformers](https://huggingface.co/) libraries. We're using 
 transformers models to bring together the power of deep learning and online web development.
 
 
@@ -18,3 +18,18 @@ This app will be created under a steamlit server, but for now, it's still a loca
 |![image](https://user-images.githubusercontent.com/53291220/196006279-24c20f94-3c8f-4449-9067-263a5c0bf566.png)|
 |:--:| 
 | *A preview of the first overview of the app* |
+
+
+## How to use?
+
+Using this app is pretty easy! All you have to do is choosing a topic (here I chose to know more about my name - Mitra):
+
+|![image](https://user-images.githubusercontent.com/53291220/196006445-b283d33e-748b-4d23-9075-f9929a905c79.png)|
+|:--:| 
+| *First step: choose the topic* |
+
+Then, after reading the scraped wikipedea article, you can ask a question from the text. For instance, I asked: "What is the origin of Mitra", and as you can see, after a few seconds, the answer is outputted - Indo-Iranian.
+
+|![image](https://user-images.githubusercontent.com/53291220/196006525-368ec6d7-706c-43cd-8018-8ba65ceb566b.png)|
+|:--:| 
+| *Second step: ask a question* |
