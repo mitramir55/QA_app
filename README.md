@@ -3,7 +3,9 @@
 
 ## Easiest way to run the app??
 
-As streamlit might have many conflicts with other libraries you've installed before, I suggest using Google Colab to avoid any confusion or time loss.
+Here is the link to the streamlit app: [link](https://mitramir55-qa-app-app-yf272w.streamlitapp.com/)
+
+If you want to run it locally, as streamlit might have many conflicts with other libraries you've installed before, I suggest using Google Colab to avoid any confusion or time loss. But you can also clone the project and run it on your own system after installing all the requirements in the requirements.txt file.
 
 ## Description
 
