@@ -1,4 +1,4 @@
-#  Copyright Minaoar Hossain Tanzil, 2022 Licensed under MIT License.
+#  Copyright Mitra Mirshafiee, 2022 Licensed under MIT License.
 #  See the LICENSE.txt for more information.
 
 import wikipedia
