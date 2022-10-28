@@ -1,4 +1,4 @@
-#  Copyright Mitra Mir, 2022 Licensed under MIT License.
+#  Copyright Mitra Mirshafiee, 2022 Licensed under MIT License.
 #  See the LICENSE.txt for more information.
 
 import wikipedia
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     st.image('assets\qa.jpeg', use_column_width  = True)
 
-    st.markdown("[image source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
+    st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
     # display title and description
     st.title("Wikipedia Question Answering")
     st.write("Search topic, Ask questions, Get Answers")
