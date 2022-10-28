@@ -1,4 +1,4 @@
-#  Copyright Minaoar Hossain Tanzil, 2022 Licensed under MIT License.
+#  Copyright Mitra Mir, 2022 Licensed under MIT License.
 #  See the LICENSE.txt for more information.
 
 import wikipedia
@@ -29,8 +29,7 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
 # Main app engine
 if __name__ == "__main__":
 
-    st.image('assets\qa.jpeg', use_column_width  = True
-     )
+    st.image('assets\qa.jpeg', use_column_width  = True)
 
     st.markdown("[image source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
     # display title and description
