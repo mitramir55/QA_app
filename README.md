@@ -13,6 +13,7 @@ This is an app based on the Python programming language. In this app,
 we create a question answer application with the help of [streamlit](https://docs.streamlit.io/library/get-started), [wikipedea](https://pypi.org/project/wikipedia/), and [transformers](https://huggingface.co/) libraries. We're using 
 transformers models to bring together the power of deep learning and online web development.
 
+Please refer to runtime.txt to make sure your Python version is correct.
 
 You can read about how you can contribute to this project through 
 the contributing.md file.
