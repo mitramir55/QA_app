@@ -29,7 +29,7 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
 # Main app engine
 if __name__ == "__main__":
 
-    st.image('assets\qa.jpeg', use_column_width  = True)
+    st.image(r'assets\qa.jpeg', use_column_width  = True)
 
     st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
     # display title and description
