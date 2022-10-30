@@ -4,10 +4,9 @@
 
 import streamlit as st
 from PIL import Image
+import os
 
-
-
-image = Image.open(r"assets\NLP1.png")
+image = Image.open(os.path.join("assets", "NLP1.png"))
 st.image(image, use_column_width  = True, caption="[source](https://www.steadforce.com/blog/natural-language-processing-tools)")
 
 

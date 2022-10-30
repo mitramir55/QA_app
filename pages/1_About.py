@@ -3,9 +3,9 @@
 
 import streamlit as st
 from PIL import Image
+import os
 
-
-image = Image.open(r"assets\About.png")
+image = Image.open(os.path.join("assets", "About.png"))
 st.image(image, caption="[source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fknswamy.medium.com%2Fnlp-deep-learning-training-on-downstream-tasks-using-pytorch-lightning-question-answering-on-17d2a0965733&psig=AOvVaw3dF3CmmRkb3MGa7yc5yX8L&ust=1667234039984000&source=images&cd=vfe&ved=0CA4QjhxqFwoTCLjwuvewiPsCFQAAAAAdAAAAABAE)")
 
 st.header("Who is the creator?")
