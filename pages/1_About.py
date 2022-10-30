@@ -1,5 +1,6 @@
 #  Copyright Mitra Mirshafiee, 2022 Licensed under MIT License.
 #  See the LICENSE.txt for more information.
+
 import streamlit as st
 st.image(r"assets\About.png")
 st.markdown("[source](https://levelup.gitconnected.com/we-need-to-talk-about-the-software-engineer-grind-culture-801f3c3613aa)")

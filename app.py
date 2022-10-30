@@ -27,7 +27,7 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
     return output
 
 
-st.image(r"assets\qa.png", use_column_width  = True)
+st.image(r"assets\qa.png")
 
 st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
 # display title and description
