@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//github.com/rianjs/ical.net//NONSGML ical.net 4.0//EN
+VERSION:2.0
+BEGIN:VEVENT
+CATEGORIES:Arts
+CATEGORIES:Music
+DESCRIPTION:An in-person singing competition for anyone who is interested 
+ in participating! Prizes will be awarded to the top three singers. \n\nHo
+ sted by: Schulich Soundstage\, UCalgary Sings\n\nAdditional Information c
+ an be found at: https://suuofc.campuslabs.ca/engage/event/218770
+DTEND:20221119T020000Z
+DTSTAMP:20221028T211652Z
+DTSTART:20221119T000000Z
+GEO:51.078370;-114.134660
+LOCATION:MacEwan hall
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:UCalgary Sings Singing Competition (in person)
+UID:https://suuofc.campuslabs.ca/engage/event/218770
+URL:https://suuofc.campuslabs.ca/engage/event/218770
+X-HOSTS:UCalgary Sings
+END:VEVENT
+END:VCALENDAR
