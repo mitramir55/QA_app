@@ -3,11 +3,14 @@
 
 
 import streamlit as st
+from PIL import Image
 
 
 # Main app engine
 if __name__ == "__main__":
-    st.image(r"assets\NLP1.png", use_column_width  = True)
+    
+    image = Image.open('sunrise.jpg')
+    st.image(image, use_column_width  = True)
     st.markdown("[source](https://www.steadforce.com/blog/natural-language-processing-tools)")
 
     # display topic input slot

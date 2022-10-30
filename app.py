@@ -5,6 +5,7 @@ import wikipedia
 import streamlit as st
 from tokenizers import Tokenizer
 from transformers import pipeline, Pipeline 
+from PIL import Image
 
 
 @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
@@ -26,8 +27,8 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
     output = pipeline(input)
     return output
 
-
-st.image(r"assets\first.jpg")
+image = Image.open("assets\first.jpg")
+st.image(image)
 
 st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
 # display title and description

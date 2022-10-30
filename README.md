@@ -7,6 +7,10 @@ Here is the link to the streamlit app: [link](https://mitramir55-qa-app-app-yf27
 
 If you want to run it locally, as streamlit might have many conflicts with other libraries you've installed before, I suggest using Google Colab to avoid any confusion or time loss. But you can also clone the project and run it on your own system after installing all the requirements in the requirements.txt file.
 
+
+Make sure to install the requirements first before creating the app. For example, runt the following command, if you're using pip:
+`pip install -r requirements.txt`
+
 ## Description
 
 This is an app based on the Python programming language. In this app, 
