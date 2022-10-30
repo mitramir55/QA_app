@@ -29,7 +29,8 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
 
 
 image = Image.open(os.path.join("assets", "first.jpg"))
-st.image(image, caption="[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
+st.image(image)
+st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
 
 # display title and description
 st.title("Wikipedia Question Answering")
