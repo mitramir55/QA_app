@@ -31,3 +31,8 @@ This project is one of the deliverables of the
  [CONTRIBUTING file](https://github.com/mitramir55/QA_app/blob/main/CONTRIBUTING.md)
  in the GitHub repo. 
 """)
+
+st.markdown("""
+This project is under the MIT license. 
+Please make sure to read the license before contributing.
+""")
