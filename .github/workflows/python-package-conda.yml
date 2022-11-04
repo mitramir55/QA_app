@@ -37,6 +37,7 @@ jobs:
         pip install wikipedia
         pip install protobuf==3.20.*
         pip install pytest
+        pip install pytorch
     - name: Run pytest
       run: | 
         pytest test.py
