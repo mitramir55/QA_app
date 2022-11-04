@@ -21,7 +21,7 @@ def test_answer_question():
     qa_pipeline = load_qa_pipeline()
     assert expected_var == answer_question(qa_pipeline, question, load_wiki_summary("mitra"))["answer"]
     
-#def test_answer_question_fail():
+def test_answer_question_fail():
     expected_var = "Indo-Iranian"
     question = "what is the origin of mitra"
     qa_pipeline = load_qa_pipeline()
