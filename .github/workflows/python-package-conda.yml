@@ -3,8 +3,10 @@ name: pytest
 on:
   push:
     branches: [ main ]
+    
   pull_request:
     branches: [ main ]
+    
 
 permissions:
   contents: read
@@ -32,6 +34,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest    
         pip install wikipedia
+        pip install streamlit
     - name: Run pytest
       run: | 
         pytest test.py
