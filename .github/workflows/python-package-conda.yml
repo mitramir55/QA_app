@@ -35,7 +35,6 @@ jobs:
         pip install streamlit
         pip install transformers
         pip install wikipedia
-        pip install pillows 
         pip install protobuf==3.20.*
         pip install pytest
     - name: Run pytest
