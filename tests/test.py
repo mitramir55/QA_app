@@ -1,5 +1,4 @@
 import pytest
-import app
 from app import load_wiki_summary, answer_question, load_qa_pipeline
 
 
