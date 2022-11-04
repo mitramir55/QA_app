@@ -8,18 +8,41 @@ from transformers import pipeline, Pipeline
 from PIL import Image
 import os
 
+
 @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
 def load_qa_pipeline() -> Pipeline:
+    """Loads the question and answer pipeline using ML based on model distilbert-base-uncased-distilled-squad
+
+    
+    """
     qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
     return qa_pipeline
 
 @st.cache
 def load_wiki_summary(query: str) -> str:
+    """Loads a wiki summary based on user input
+
+    Args:
+        query (str): user input
+
+    Returns:
+        str: summary of the wikipedia search based on user input
+    """
     results = wikipedia.search(query)
     summary = wikipedia.summary(results[0], sentences=10)
     return summary
 
 def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
+    """ Takes user input to form a question and uses ML and the trained model to answer the question
+
+    Args:
+        pipeline (Pipeline): pipeline using ML based on model distilbert-base-uncased-distilled-squad
+        question (str): user inputed question
+        paragraph (str): the summary of the wikipedia page
+
+    Returns:
+        dict: Using ML and the user inputed question returns an answer to it
+    """
     input = {
         "question": question,
         "context": paragraph
