@@ -8,27 +8,27 @@ from transformers import pipeline, Pipeline
 from PIL import Image
 import os
 
-@st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
-def load_qa_pipeline() -> Pipeline:
-    qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
-    return qa_pipeline
-
-@st.cache
-def load_wiki_summary(query: str) -> str:
-    results = wikipedia.search(query)
-    summary = wikipedia.summary(results[0], sentences=10)
-    return summary
-
-def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
-    input = {
-        "question": question,
-        "context": paragraph
-    }
-    output = pipeline(input)
-    return output
-
-
 def main():
+    @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
+    def load_qa_pipeline() -> Pipeline:
+        qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
+        return qa_pipeline
+
+    @st.cache
+    def load_wiki_summary(query: str) -> str:
+        results = wikipedia.search(query)
+        summary = wikipedia.summary(results[0], sentences=10)
+        return summary
+
+    def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
+        input = {
+            "question": question,
+            "context": paragraph
+        }
+        output = pipeline(input)
+        return output
+
+
     image = Image.open(os.path.join("assets", "first.jpg"))
     st.image(image)
     st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
