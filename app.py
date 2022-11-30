@@ -28,39 +28,42 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
     return output
 
 
-image = Image.open(os.path.join("assets", "first.jpg"))
-st.image(image)
-st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
+def main():
+    image = Image.open(os.path.join("assets", "first.jpg"))
+    st.image(image)
+    st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
 
-# display title and description
-st.title("Wikipedia Question Answering")
-st.write("Search topic, Ask questions, Get Answers")
+    # display title and description
+    st.title("Wikipedia Question Answering")
+    st.write("Search topic, Ask questions, Get Answers")
 
-# display topic input slot
-topic = st.text_input("SEARCH TOPIC", "")
+    # display topic input slot
+    topic = st.text_input("SEARCH TOPIC", "")
 
-# display article paragraph
-article_paragraph = st.empty()
+    # display article paragraph
+    article_paragraph = st.empty()
 
-# display question input slot
-question = st.text_input("QUESTION", "")
+    # display question input slot
+    question = st.text_input("QUESTION", "")
 
-if topic:
-    # load wikipedia summary of topic
-    summary = load_wiki_summary(topic)
+    if topic:
+        # load wikipedia summary of topic
+        summary = load_wiki_summary(topic)
 
-    # display article summary in paragraph
-    article_paragraph.markdown(summary)
+        # display article summary in paragraph
+        article_paragraph.markdown(summary)
 
-    # perform question answering
-    if question != "":
-        # load question answering pipeline
-        qa_pipeline = load_qa_pipeline()
+        # perform question answering
+        if question != "":
+            # load question answering pipeline
+            qa_pipeline = load_qa_pipeline()
 
-        # answer query question using article summary
-        result = answer_question(qa_pipeline, question, summary)
-        answer = result["answer"]
+            # answer query question using article summary
+            result = answer_question(qa_pipeline, question, summary)
+            answer = result["answer"]
 
-        # display answer
-        st.write(answer)
+            # display answer
+            st.write(answer)
 
+if __name__ == "__main__":
+  main()
