@@ -28,6 +28,13 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
     return output
 
 if __name__ == "__main__":
+
+    st.set_page_config(
+    page_title="Question Answering App",
+    page_icon="❓",
+    )
+    st.sidebar.success("Select a page to view.")
+
     image = Image.open(os.path.join("assets", "first.jpg"))
     st.image(image)
     st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")

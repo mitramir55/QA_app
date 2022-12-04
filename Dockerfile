@@ -3,7 +3,7 @@ FROM python:3.9
 
 WORKDIR /QA_APP
 
-ADD app.py .
+ADD 0_app.py .
 
 CMD [ "python", "app.py" ]
 
