@@ -7,6 +7,9 @@ from tokenizers import Tokenizer
 from transformers import pipeline, Pipeline 
 from PIL import Image
 import os
+from streamlit.logger import get_logger
+
+LOGGER = get_logger(__name__)
 
 @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
 def load_qa_pipeline() -> Pipeline:
