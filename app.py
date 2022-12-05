@@ -7,6 +7,9 @@ from tokenizers import Tokenizer
 from transformers import pipeline, Pipeline 
 from PIL import Image
 import os
+from streamlit.logger import get_logger
+
+LOGGER = get_logger(__name__)
 
 def main():
     @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
@@ -28,6 +31,9 @@ def main():
         output = pipeline(input)
         return output
 
+if __name__ == "__main__":
+
+    st.sidebar.success("Select a page to view.")
 
     image = Image.open(os.path.join("assets", "first.jpg"))
     st.image(image)
