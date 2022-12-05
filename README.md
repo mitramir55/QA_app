@@ -45,3 +45,7 @@ Then, after reading the scraped wikipedea article, you can ask a question from t
 |![image](https://user-images.githubusercontent.com/53291220/196006525-368ec6d7-706c-43cd-8018-8ba65ceb566b.png)|
 |:--:| 
 | *Second step: ask a question* |
+
+## Tests
+
+Unit tests are placed inside the code, specifically in the app.py.

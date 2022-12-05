@@ -11,25 +11,25 @@ from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
 
-def main():
-    @st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
-    def load_qa_pipeline() -> Pipeline:
-        qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
-        return qa_pipeline
 
-    @st.cache
-    def load_wiki_summary(query: str) -> str:
-        results = wikipedia.search(query)
-        summary = wikipedia.summary(results[0], sentences=10)
-        return summary
+@st.cache(hash_funcs={Tokenizer: lambda _: None}, allow_output_mutation=True)
+def load_qa_pipeline() -> Pipeline:
+    qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
+    return qa_pipeline
 
-    def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
-        input = {
-            "question": question,
-            "context": paragraph
-        }
-        output = pipeline(input)
-        return output
+@st.cache
+def load_wiki_summary(query: str) -> str:
+    results = wikipedia.search(query)
+    summary = wikipedia.summary(results[0], sentences=10)
+    return summary
+
+def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
+    input = {
+        "question": question,
+        "context": paragraph
+    }
+    output = pipeline(input)
+    return output
 
 if __name__ == "__main__":
 
@@ -53,6 +53,12 @@ if __name__ == "__main__":
     question = st.text_input("QUESTION", "")
 
     if topic:
+
+        
+        # test if it's string
+        assert type(topic) == str, 'please write a question in the form of a text.'
+
+
         # load wikipedia summary of topic
         summary = load_wiki_summary(topic)
 
@@ -67,6 +73,9 @@ if __name__ == "__main__":
             # answer query question using article summary
             result = answer_question(qa_pipeline, question, summary)
             answer = result["answer"]
+
+            # test if it's string
+            assert type(topic) == str, 'please write a question in the form of a text.'
 
             # display answer
             st.write(answer)
