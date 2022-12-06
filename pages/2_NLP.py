@@ -7,9 +7,6 @@ from PIL import Image
 import os
 
 if __name__ == "__main__":
-    image = Image.open(os.path.join("assets", "nlp.jpg"))
-    st.markdown(image)
-    st.markdown("[source](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hp.com%2Fus-en%2Fshop%2Ftech-takes%2Fwhat-is-natural-language-processing&psig=AOvVaw3fSTfRv8bNQbjDFRD-g6iN&ust=1670449257750000&source=images&cd=vfe&ved=0CBAQjhxqFwoTCICCucb65fsCFQAAAAAdAAAAABAJ)")
 
     # display topic input slot
     st.title("What is NLP?", "")
