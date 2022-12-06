@@ -4,6 +4,7 @@ FROM python:3.9
 WORKDIR /QA_APP
 
 ADD app.py .
+ADD assets assets
 
 CMD [ "python", "app.py" ]
 

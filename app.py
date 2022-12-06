@@ -80,5 +80,3 @@ if __name__ == "__main__":
             # display answer
             st.write(answer)
 
-if __name__ == "__main__":
-  main()

@@ -7,8 +7,8 @@ from PIL import Image
 import os
 
 if __name__ == "__main__":
-    image = Image.open(os.path.join("assets", "NLP1.png"))
-    st.image(image, use_column_width  = True)
+    # image = Image.open(os.path.join("assets", "NLP1.png"))
+    st.markdown(image, use_column_width  = True)
     st.markdown("[source](https://www.steadforce.com/blog/natural-language-processing-tools)")
 
     # display topic input slot
