@@ -33,8 +33,6 @@ def answer_question(pipeline: Pipeline, question: str, paragraph: str) -> dict:
 
 if __name__ == "__main__":
 
-    st.sidebar.success("Select a page to view.")
-
     image = Image.open(os.path.join("assets", "first.jpg"))
     st.image(image)
     st.markdown("[Source](https://towardsdatascience.com/automatic-question-answering-ac7593432842)")
