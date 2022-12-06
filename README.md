@@ -11,6 +11,11 @@ If you want to run it locally, as streamlit might have many conflicts with other
 Make sure to install the requirements first before creating the app. For example, runt the following command, if you're using pip:
 `pip install -r requirements.txt`
 
+Then run the code with the following command:
+
+`streamlit run app.py`
+
+
 ## Description
 
 This is an app based on the Python programming language. In this app, 
