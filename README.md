@@ -1,20 +1,21 @@
 # :question:Question :exclamation:Answering with the help of transformers
 
+Copyright Mitra Mirshafiee, 2022 Licensed under MIT License.
 
 ## Easiest way to run the app??
 
-Here is the link to the streamlit app: [link](https://question-answering.streamlit.app/)
+Here is the link to the streamlit app, if you want to take a look at the main functionality of this project: [link](https://question-answering.streamlit.app/)
 
-If you want to run it locally, as streamlit might have many conflicts with other libraries you've installed before, I suggest using Google Colab to avoid any confusion or time loss. But you can also clone the project and run it on your own system after installing all the requirements in the requirements.txt file.
+For running the app locally, make sure you install the requirements first, and then run the app with Stremlit. For example, runt the following commands, if you're using pip:
 
 
-Make sure to install the requirements first before creating the app. For example, runt the following command, if you're using pip:
 `pip install -r requirements.txt`
 
-Then run the code with the following command:
+And then:
 
 `streamlit run app.py`
 
+Additionally, you can use the Docker image to replicate the project. For this you need to know how to work with Docker (more on this on [Docker documentation](https://docs.docker.com/).) Here is the 
 
 ## Description
 
@@ -24,13 +25,21 @@ transformers models to bring together the power of deep learning and online web 
 
 Please refer to runtime.txt to make sure your Python version is correct.
 
-You can read about how you can contribute to this project through 
-the contributing.md file.
+## Contribution
+
+You can read about how you can contribute to this project through the contributing.md file. And thanks for considering a contribution to this project!
+
+## License
 
 The License to this project is MIT license which allows you to utilize the code
 and create your own version of the app.
 
-This app will be created under a steamlit server, but for now, it's still a locally run project.
+## Language
+
+This project is written in Python with the help of the Streamlit framework. 
+
+## preview
+
 
 |![image](https://user-images.githubusercontent.com/53291220/196006279-24c20f94-3c8f-4449-9067-263a5c0bf566.png)|
 |:--:| 
